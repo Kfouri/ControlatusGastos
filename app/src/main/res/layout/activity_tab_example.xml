@@ -1,0 +1,531 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:background="#FFFFFF"
+    android:layout_marginTop="50dp"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" >
+
+            <RelativeLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" >
+
+                <RelativeLayout android:id="@+id/ad"
+                    android:background="@android:color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id" />
+
+                </RelativeLayout>
+
+                <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport = "true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/fecha_gasto_titulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="@string/fecha"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_fecha"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fecha_gasto_titulo"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <DatePicker
+                                android:id="@+id/fecha_gasto_tab1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:calendarViewShown="false"
+                                android:scaleX=".8"
+                                android:scaleY=".8"
+                                style="@android:style/Widget.DatePicker"/>
+
+                            <Button
+                                android:id="@+id/botonBuscar_tab1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/Buscar" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/titulo_listado_tab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ListadoGastos"
+                            android:layout_below="@+id/layout_fecha"
+                            android:textSize="18sp"/>
+
+                        // custom Headers
+                        <LinearLayout
+                            android:id="@+id/customHeader_tab1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/titulo_listado_tab1">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Categoria" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Importe" />
+
+                        </LinearLayout>
+
+                        <com.kfouri.controlatusgastos.Utils.ExpandableHeightListView
+                            android:id="@+id/listViewDiario_tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:fadingEdge="none"
+                            android:focusable="false"
+                            android:scrollbars="none"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/customHeader_tab1"
+                            />
+
+                        <TextView
+                            android:id="@+id/totalDiario_tab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/total"
+                            android:layout_below="@+id/listViewDiario_tab1"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="60dp"/>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout android:id="@+id/adMensual"
+                    android:background="@android:color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adViewMensual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id" />
+
+                </RelativeLayout>
+
+                <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport = "true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/fecha_gasto_titulo_tab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="@string/fecha"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_fecha_tab2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fecha_gasto_titulo_tab2"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Spinner
+                                android:id="@+id/spn_mes_tab2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:prompt="@string/mes"/>
+
+                            <Spinner
+                                android:id="@+id/spn_anio_tab2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:prompt="@string/anio"/>
+
+                            <Button
+                                android:id="@+id/botonBuscar_tab2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Buscar" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/titulo_listado_tab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ListadoGastosMensual"
+                            android:layout_below="@+id/layout_fecha_tab2"
+                            android:textSize="18sp"/>
+
+                        // custom Headers
+                        <LinearLayout
+                            android:id="@+id/customHeader_tab2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/titulo_listado_tab2">
+
+                            <TextView
+                                android:id="@+id/textView2_tab2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Categoria" />
+
+                            <TextView
+                                android:id="@+id/textView3_tab2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Importe" />
+
+                        </LinearLayout>
+
+                        <com.kfouri.controlatusgastos.Utils.ExpandableHeightListView
+                            android:id="@+id/listViewDiario_tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:fadingEdge="none"
+                            android:focusable="false"
+                            android:scrollbars="none"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/customHeader_tab2"
+                            />
+
+                        <TextView
+                            android:id="@+id/totalMensual_tab2_titulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/totalMensual"
+                            android:layout_below="@+id/listViewDiario_tab2"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="20dp"/>
+
+
+                        <TextView
+                            android:id="@+id/totalMensual_tab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/total"
+                            android:layout_below="@+id/listViewDiario_tab2"
+                            android:layout_toRightOf="@+id/totalMensual_tab2_titulo"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="20dp"/>
+
+
+
+
+
+
+                        <TextView
+                            android:id="@+id/titulo_listado2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ListadoGastosDetallado"
+                            android:layout_below="@+id/totalMensual_tab2"
+                            android:textSize="18sp"/>
+
+                        // custom Headers
+                        <LinearLayout
+                            android:id="@+id/customHeader2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/titulo_listado2">
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/fecha" />
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Categoria" />
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Importe" />
+
+                            <TextView
+                                android:id="@+id/textView42"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Accion" />
+                        </LinearLayout>
+
+                        <com.kfouri.controlatusgastos.Utils.ExpandableHeightListView
+                            android:id="@+id/listViewtab22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:fadingEdge="none"
+                            android:focusable="false"
+                            android:scrollbars="none"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="60dp"
+                            android:layout_below="@+id/customHeader2"
+                            />
+                    </RelativeLayout>
+
+                </ScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout android:id="@+id/adAnual"
+                    android:background="@android:color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adViewAnual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id" />
+
+                </RelativeLayout>
+
+                <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport = "true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/fecha_gasto_titulo_tab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="@string/fecha"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_fecha_tab3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fecha_gasto_titulo_tab3"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+
+                            <Spinner
+                                android:id="@+id/spn_anio_tab3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:prompt="@string/anio"/>
+
+                            <Button
+                                android:id="@+id/botonBuscar_tab3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Buscar" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/titulo_listado_tab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ListadoGastosAnual"
+                            android:layout_below="@+id/layout_fecha_tab3"
+                            android:textSize="18sp"/>
+
+                        // custom Headers
+                        <LinearLayout
+                            android:id="@+id/customHeader_tab3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/titulo_listado_tab3">
+
+                            <TextView
+                                android:id="@+id/textView2_mes_tab3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mesAnio" />
+
+                            <TextView
+                                android:id="@+id/textView2_tab3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Categoria" />
+
+                            <TextView
+                                android:id="@+id/textView3_tab3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Importe" />
+
+                        </LinearLayout>
+
+                        <com.kfouri.controlatusgastos.Utils.ExpandableHeightListView
+                            android:id="@+id/listViewAnual_tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:fadingEdge="none"
+                            android:focusable="false"
+                            android:scrollbars="none"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/customHeader_tab3"
+                            />
+
+                        <TextView
+                            android:id="@+id/totalMensual_tab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/total"
+                            android:layout_below="@+id/listViewAnual_tab3"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="60dp"/>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

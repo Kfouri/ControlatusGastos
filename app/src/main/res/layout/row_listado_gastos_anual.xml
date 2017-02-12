@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/gasto_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/customHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:id="@+id/gasto_mes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Mes"
+            android:textSize="12dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/gasto_fecha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:text="27/10/2015"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/gasto_categoria"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Categoria"
+            android:textSize="12dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/gasto_importe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="30dp"
+            android:textSize="12dp"
+            android:text="1000.00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="#FFFFFF"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="Delete"
+            android:textSize="12dp"
+            android:textColor="#0099CC"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

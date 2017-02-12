@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">Control your expenses</string>
+    <string name="compartir_txt">I wish to share with you this application.</string>
+    <string name="NuevoGasto">New Charges</string>
+    <string name="NuevasCategorias">New Categories</string>
+    <string name="Compartir">Share</string>
+    <string name="Listado">List Expenses</string>
+    <string name="MasApp">More App</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8178489486911148/2004915518</string>
+    <string name="guardar">Save</string>
+    <string name="fecha">Date</string>
+    <string name="Categoria">Categorie</string>
+    <string name="Categorias">Categories</string>
+    <string name="Importe">Amount</string>
+    <string name="title_activity_categoria">Categories</string>
+    <string name="Descripcion">Description</string>
+    <string name="Observacion">Observation</string>
+    <string name="ListadoGastos">List Expenses Accumulated Journal</string>
+    <string name="ListadoGastosMensual">List Accumulated Monthly Expenses</string>
+    <string name="ListadoGastosAnual">Annual Expenses Accrued List</string>
+
+    <string name="gasto_alert_dialog_texto">Are you sure to remove spending # ?</string>
+    <string name="categoria_alert_dialog_texto">¿Are you sure to remove a categorie?</string>
+    <string name="yes">Yes</string>
+    <string name="cerrar">Close</string>
+    <string name="categoria_alert_dialog_editar_titulo">Edit Categorie</string>
+    <string name="categoria_alert_dialog_editar_descripcion">Description:</string>
+    <string name="ListadoCategorias">Categorie List</string>
+    <string name="gastoGuardado">Expenditure saved successfully.</string>
+    <string name="total">Total: </string>
+    <string name="totalMensual">Total Monthly: </string>
+    <string name="totalDiario">Daily Total: </string>
+    <string name="totalAnual">Total Annual: </string>
+    <string name="title_activity_listado_gastos">List of Charges</string>
+    <string name="Buscar">Find</string>
+    <string name="Backup">Backup/Restore</string>
+    <string name="title_activity_backup">Backup/Restore</string>
+    <string name="title_activity_nuevo_gasto">Expenses</string>
+    <string name="agregar">Add</string>
+    <string name="toastEliminarCategoria">Category deleted</string>
+    <string name="toastErrorEliminarCategoria">Error The category is already assigned to an Expense</string>
+    <string name="toastModificarCategoria">Modified category</string>
+    <string name="title_activity_nuevo_listado">List expenses (Accumulated)</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_listado_diario">List Journal</string>
+    <string name="diario">Daily</string>
+    <string name="mensual">Monthly</string>
+    <string name="anual">Annual</string>
+    <string name="mes">Select Month</string>
+    <string name="anio">Select Year</string>
+
+    <string-array name="months">
+        <item >January</item>
+        <item >February</item>
+        <item >March</item>
+        <item >April</item>
+        <item >May</item>
+        <item >June</item>
+        <item >July</item>
+        <item >August</item>
+        <item >September</item>
+        <item >October</item>
+        <item >November</item>
+        <item >December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item >2015</item>
+        <item >2016</item>
+        <item >2017</item>
+        <item >2018</item>
+        <item >2019</item>
+        <item >2020</item>
+        <item >2021</item>
+        <item >2022</item>
+        <item >2023</item>
+        <item >2024</item>
+        <item >2025</item>
+        <item >2026</item>
+        <item >2027</item>
+        <item >2028</item>
+        <item >2029</item>
+        <item >2030</item>
+        <item >2031</item>
+        <item >2032</item>
+        <item >2033</item>
+        <item >2034</item>
+        <item >2035</item>
+        <item >2036</item>
+        <item >2037</item>
+        <item >2038</item>
+        <item >2039</item>
+        <item >2040</item>
+        <item >2041</item>
+        <item >2042</item>
+        <item >2043</item>
+        <item >2044</item>
+        <item >2045</item>
+        <item >2046</item>
+        <item >2047</item>
+        <item >2048</item>
+        <item >2049</item>
+        <item >2050</item>
+    </string-array>
+    <string name="title_activity_web">More App</string>
+    <string name="compartir">I wish to share with you this application</string>
+    <string name="errorImporteVacio">Error, the amount is empty</string>
+    <string name="errorImporteNoValido">Error, invalid amount</string>
+    <string name="errorImporteCero">Error, the amount must be greater than zero</string>
+    <string name="errorCategoriaYaExiste">Error, the category already exists.</string>
+    <string name="ListadoGastosSimple">List of Charges</string>
+    <string name="UltimaFechaBackup">Last Backup:</string>
+    <string name="Restaurar">Restore Database</string>
+    <string name="backup">Backup</string>
+    <string name="restaurar">Restore</string>
+
+    <string name="Enero">January</string>
+    <string name="Febrero">February</string>
+    <string name="Marzo">March</string>
+    <string name="Abril">April</string>
+    <string name="Mayo">May</string>
+    <string name="Junio">June</string>
+    <string name="Julio">July</string>
+    <string name="Agosto">August</string>
+    <string name="Septiembre">September</string>
+    <string name="Octubre">October</string>
+    <string name="Noviembre">November</string>
+    <string name="Diciembre">December</string>
+
+    <string name="ListadoGastosDetallado">Detailed Expenses List</string>
+    <string name="Accion">Action</string>
+    <string name="mesAnio">Month</string>
+    <string name="hacerBackup">Its time to make a backup!!!</string>
+    <string name="exportarExcel">Export to Excel</string>
+    <string name="exportarExcelMail">Excel and Mail</string>
+    <string name="utlimoBackup">Last Backup:</string>
+    <string name="carpeta">Folder: </string>
+    <string name="title_activity_gasto_nuevo">GastoNuevoActivity</string>
+
+</resources>
